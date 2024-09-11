@@ -19,7 +19,7 @@ function App() {
           <Hero />
         </div>
         <LoginRegister />
-        <div className="flex justify-center items-center w-full px-[110px] gap-0 bg-[#011b73]">
+        <div className="flex justify-center items-center w-full px-[110px] gap-0 bg-black">
           
           <Main />
         </div>

@@ -3,10 +3,11 @@ import { FaLock, FaSignInAlt } from "react-icons/fa";
 
 export  const LoginRegister = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="bg-black flex justify-center items-center min-h-screen ">
       <div className="w-full max-w-2xl bg-white shadow-md rounded-lg p-8">
         <h1 className="text-2xl font-bold text-black mb-4">Bookmee</h1>
-        <p className="text-sm mb-4">
+        <p> Login/Register</p>
+        <p className="text-sm text-center mb-4 text-gray-400 mt-6">
           If you have booked before, an account will have been created for you.
           If you are unsure of this account's credentials select Reset Password
           below.
@@ -34,12 +35,12 @@ export  const LoginRegister = () => {
               className="w-full p-2 border border-gray-300 rounded"
             />
           </div>
-          <div className="flex justify-between">
-            <button className="bg-black text-white p-2 rounded flex items-center">
+          <div className="flex justify-between mt-8">
+            <button className="bg-black text-[#FEB601] p-2 rounded flex w-full items-center justify-center mr-4">
               Reset Password 
               <FaLock className="mr-2" />
             </button>
-            <button className="bg-yellow-500 text-white p-2 rounded flex items-center">
+            <button className="bg-yellow-500 text-black p-2 rounded flex w-full items-center justify-center">
               <FaSignInAlt className="mr-2" />
               Log In
             </button>
@@ -153,10 +154,10 @@ export  const LoginRegister = () => {
           </div>
         </div>
         <div className="flex justify-between mt-8">
-          <button className="bg-black text-white p-2 rounded w-full mr-4">
+          <button className="bg-black text-[#FEB601] p-2 rounded w-full mr-4">
             Book A Ride
           </button>
-          <button className="bg-yellow-500 text-white p-2 rounded w-full">
+          <button className="bg-yellow-500 text-black p-2 rounded w-full">
             Register
           </button>
         </div>
