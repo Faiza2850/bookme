@@ -1,10 +1,12 @@
 import React from "react";
+
 import img1 from "../images/img1.png";
 import img2 from "../images/img2.png";
 import img3 from "../images/img3.png";
 import img4 from "../images/img4.png";
 import img5 from "../images/img5.png";
 import img6 from "../images/img6.png";
+import { LoginRegister } from "./LoginRegister";
 
 export const Main = () => {
   const vehicles = [
@@ -47,9 +49,11 @@ export const Main = () => {
   ];
 
   return (
-    <div className="text-white  p-8">
+
+    <div className="text-white mb-4 p-8  ">
+     <div className=" top-2/3 left-0 right-0 flex justify-center "> <LoginRegister/></div>
       <div className="mb-6">
-        <h2 className="text-3xl font-semibold mb-4 text-center leading-[48px] text-[#FEB601]">
+        <h2 className="text-3xl font-semibold mb-4 text-center leading-[48px] text-[#FEB601] mt-12">
           TAXI TRANSFERS{" "}
           <span className="font-light text-white">
             TO AND FROM ALL UK AIRPORTS
@@ -124,7 +128,8 @@ export const Main = () => {
         Regardless of your party size, luggage, or special requirements, we can
         usually provide the perfect vehicle.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-1 text-left gap-6  justify-center items-center w-[962px] h-[1359] top-[3479] left-[144px]">
+      <div className="justify-center items-center pl-48"> 
+      <div className="grid grid-cols-1 md:grid-cols-1 text-left gap-6  justify-center items-center w-[962px] h-[1359] top-[3479] left-[194px] ">
         {vehicles.map((vehicle, index) => (
           <div
             key={index}
@@ -148,6 +153,8 @@ export const Main = () => {
           </div>
         ))}
       </div>
+      </div>
+      
     </div>
   );
 };

@@ -8,7 +8,7 @@ import img8 from "../images/img8.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-black text-white p-10">
+    <footer className="bg-black text-white p-10 justify-center items-center pl-44">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h5 className="font-bold text-lg mb-3 text-yellow-500">Passengers</h5>

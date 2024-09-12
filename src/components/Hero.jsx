@@ -1,4 +1,5 @@
 import React from "react";
+import hero from "../images/hero.png";
 
 export const Hero = () => {
   return (
@@ -9,6 +10,10 @@ export const Hero = () => {
         
 </div>
      */}
+     <div
+          className="min-h-screen bg-cover bg-center relative"
+          style={{ backgroundImage: `url(${hero})` }}
+        >
       <section className="absolute flex inset-0 bg-black bg-opacity-50">
         <div className="m-auto">
           <div className="flex flex-col justify-center items-center text-center z-10">
@@ -20,7 +25,9 @@ export const Hero = () => {
             </p>
           </div>
         </div>
+        
       </section>
+      </div>
     </>
   );
 };

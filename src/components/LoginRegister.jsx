@@ -3,10 +3,10 @@ import { FaLock, FaSignInAlt } from "react-icons/fa";
 
 export  const LoginRegister = () => {
   return (
-    <div className="bg-black flex justify-center items-center min-h-screen ">
-      <div className="w-full max-w-2xl bg-white shadow-md rounded-lg p-8">
+    <div className="bg-black flex  justify-center items-center min-h-screen  ">
+      <div className="w-full max-w-8xl bg-white shadow-md rounded-lg p-8 mt-[-280px]  z-20 ">
         <h1 className="text-2xl font-bold text-black mb-4">Bookmee</h1>
-        <p> Login/Register</p>
+        <p className="text-black"> Login/Register</p>
         <p className="text-sm text-center mb-4 text-gray-400 mt-6">
           If you have booked before, an account will have been created for you.
           If you are unsure of this account's credentials select Reset Password
