@@ -50,7 +50,7 @@ export const Main = () => {
 
   return (
 
-    <div className="text-white mb-4 p-8  ">
+    <div className="text-white mb-4 p-8 mb:w-[full] ">
      <div className=" top-2/3 left-0 right-0 flex justify-center "> <LoginRegister/></div>
       <div className="mb-6">
         <h2 className="text-3xl font-semibold mb-4 text-center leading-[48px] text-[#FEB601] mt-12">

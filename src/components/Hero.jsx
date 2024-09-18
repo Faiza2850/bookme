@@ -11,8 +11,8 @@ export const Hero = () => {
 </div>
      */}
      <div
-          className="min-h-screen bg-cover bg-center relative"
-          style={{ backgroundImage: `url(${hero})` }}
+          className="min-h-screen bg-cover bg-center relative w-full md:w-full"
+          style={{ backgroundImage: `url(${hero})`, width:'100%' }}
         >
       <section className="absolute flex inset-0 bg-black bg-opacity-50">
         <div className="m-auto">

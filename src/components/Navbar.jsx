@@ -1,46 +1,41 @@
-import React from "react";
-import logo from "../images/logo.png";
+import React, { useState } from 'react'
+import logo from '../images/logo.png';
 
 export const Navbar = () => {
-  return (
-    <nav className="flex items-center justify-between bg-black w-full h-[74px] px-[28px] py-[16px]">
-      <div className="w-[150px] h-[37.5px] top-4 left-7">
-        <img src={logo} alt="Logo" className="object-contain" />
-      </div>
-      <div className="flex justify-between items-center w-[841px]">
-        <ul className="flex space-x-8 list-none m-0 p-0 ">
-          <li>
-            <a href="#" className="text-white text-base hover:text-orange-500">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white text-base hover:text-orange-500">
-              Q&A
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white text-base hover:text-orange-500">
-              T&C
-            </a>
-          </li>
-          <li>
-            <a href="#" className="text-white text-base hover:text-orange-500">
-              Contact
-            </a>
-          </li>
-        </ul>
-        <div className="flex justify-between items-center gap-4">
-          <button className="bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition duration-300">
-            Live Chat
-          </button>
-          <button className="bg-white text-orange-500 py-2 px-4 rounded-full hover:bg-orange-600 hover:text-white transition duration-300">
-            Login
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
-};
+const [isMenuOpen, setIsMenuOpen]= useState(false)
 
-// export default Navbar;
+  return (
+    <div className='bg-black  flex w-full items-center text-white py-6 px-4 md:px-20 '>
+      <img src={logo} alt='bookme' className=' h-10 w-36 hover:scale-105 ml-2 md:mr-96 transition-all'/>
+      <header className='flex  text-white '>
+      <div className='flex mr-44 sm:mr-36 md:mr-60 max-w-full'>
+  <ul className='hidden xl:flex hover:scale-105 transition-all text-base'>
+    <li className='p-3 hover:text-[#FEB601] transition-all cursor-pointer'>Home</li>
+    <li className='p-3 hover:text-[#FEB601] transition-all cursor-pointer'>Q&A</li>
+    <li className='p-3 hover:text-[#FEB601] transition-all cursor-pointer'>T&C</li>
+    <li className='p-3 hover:text-[#FEB601] transition-all cursor-pointer'>Contact Us</li>
+  </ul>
+</div>
+
+        <div className=' relative hidden md:flex md:justify-center sm:ml-4 md:ml-10 items-center gap-3  '>
+          <button className='left-3 bg-[#FEB601] hover:bg-white hover:text-[#FEB601] text-white rounded-full px-4
+          py-2 '>Live Chat</button>
+          <button className=' left-3 text-[#FEB601] hover:bg-[#FEB601] hover:text-white bg-white rounded-full px-4
+          py-2 '> Log In</button>
+        </div>
+        <i className='bx bx-menu xl:hidden justify-center block text-5xl cursor-pointer '
+          onClick={()=> setIsMenuOpen(!isMenuOpen)}>
+            <div className={`absolute xl:hidden top-24 left-0 w-full bg-black flex flex-col items center  font-semibold text-lg transform-transition ${isMenuOpen ? 'opacity-100' : 'opacity-0 '}`} style={{transition:'transform 0.3s ease, opacity 0.3s ease'}}>
+              <li className='list-none w-full bg-black text-center p-4 hover:text-[#FEB601] transition-all cursor-pointer '>Home</li>
+              <li className='list-none w-full  bg-black text-center p-4 hover:text-[#FEB601] transition-all cursor-pointer '>Q&A</li>
+              <li className='list-none w-full  bg-black text-center p-4 hover:text-[#FEB601] transition-all cursor-pointer '>T&C</li>
+              <li className='list-none w-full  bg-black text-center p-4 hover:text-[#FEB601] transition-all cursor-pointer '>Contact Us</li>
+            </div>
+        </i>
+      </header>
+
+    </div>
+  )
+}
+
+// export default Navbar

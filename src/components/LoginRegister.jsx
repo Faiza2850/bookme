@@ -3,8 +3,8 @@ import { FaLock, FaSignInAlt } from "react-icons/fa";
 
 export  const LoginRegister = () => {
   return (
-    <div className="bg-black flex  justify-center items-center min-h-screen  ">
-      <div className="w-full max-w-8xl bg-white shadow-md rounded-lg p-8 mt-[-280px]  z-20 ">
+    <div className="bg-black flex  justify-center items-center min-h-screen ">
+      <div className="w-[full] max-w-8xl bg-white shadow-md rounded-lg p-8 mt-[-280px]  z-20 ">
         <h1 className="text-2xl font-bold text-black mb-4">Bookmee</h1>
         <p className="text-black"> Login/Register</p>
         <p className="text-sm text-center mb-4 text-gray-400 mt-6">
@@ -14,7 +14,7 @@ export  const LoginRegister = () => {
         </p>
 
         {/* Login Section */}
-        <div className="mb-8">
+        <div className="mb-8 w-full">
           <div className="mb-4 ">
             <label className="text-[#FEB601] block font-bold mb-2 ">
               E-mail*
