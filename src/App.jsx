@@ -5,8 +5,10 @@ import {Header} from '../../bookme/src/components/Header';
 import { Navbar } from "../../bookme/src/components/Navbar";
 import { Hero } from "../../bookme/src/components/Hero";
 import {Profile} from '../../bookme/src/components/Profile';
+import {Submission} from '../../bookme/src/components/Submission';
 import { Main } from "../../bookme/src/components/Main";
 import { Footer } from "../../bookme/src/components/Footer";
+
 // import { LoginRegister } from "../../bookme/src/components/LoginRegister";
 // import LoginReg from "./pages/loginReg";
 
@@ -17,8 +19,8 @@ function App() {
         <Header /> */}
         {/* <Hero /> */}
         <Navbar/>
-        <div className="bg-black"><Profile/></div>
-        
+        {/* <div className="bg-black"><Profile/></div> */}
+        <Submission/>
         <Footer/>
       
          {/*
