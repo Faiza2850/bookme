@@ -1,20 +1,22 @@
 import "./App.css";
 import "./index.css";
 import hero from "../src/images/hero.png";
+import {Header} from '../../bookme/src/components/Header';
 import { Navbar } from "../../bookme/src/components/Navbar";
 import { Hero } from "../../bookme/src/components/Hero";
 import {Profile} from '../../bookme/src/components/Profile';
 import { Main } from "../../bookme/src/components/Main";
 import { Footer } from "../../bookme/src/components/Footer";
-import { LoginRegister } from "../../bookme/src/components/LoginRegister";
-import LoginReg from "./pages/loginReg";
+// import { LoginRegister } from "../../bookme/src/components/LoginRegister";
+// import LoginReg from "./pages/loginReg";
 
 function App() {
   return (
     <>
-    
-        <Navbar />
+{/*     
+        <Header /> */}
         {/* <Hero /> */}
+        <Navbar/>
         <div className="bg-black"><Profile/></div>
         
         <Footer/>

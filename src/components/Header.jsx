@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import logo from '../images/logo.png';
 
-export const Navbar = () => {
-const [isMenuOpen, setIsMenuOpen]= useState(false)
-
+export const Header = () => {
+    const [isMenuOpen, setIsMenuOpen]= useState(false)
   return (
     <div className='bg-black  flex w-full items-center text-white py-6  md:px-20 '>
       <img src={logo} alt='bookme' className=' h-10 w-36 hover:scale-105 ml-2 md:mr-96 transition-all'/>
@@ -38,4 +37,4 @@ const [isMenuOpen, setIsMenuOpen]= useState(false)
   )
 }
 
-// export default Navbar
+// export default Header
