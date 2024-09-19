@@ -17,11 +17,11 @@ const [isMenuOpen, setIsMenuOpen]= useState(false)
   </ul>
 </div>
 
-        <div className=' relative hidden md:flex md:justify-center sm:ml-4 md:ml-10 items-center gap-3  '>
+        <div className=' relative  hidden md:flex md:justify-center sm:ml-4 md:ml-10 items-center gap-3  '>
           <button className='left-3 bg-[#FEB601] hover:bg-white hover:text-[#FEB601] text-white rounded-full px-4
-          py-2 '>Live Chat</button>
+          py-2'>Live Chat</button>
           <button className=' left-3 text-[#FEB601] hover:bg-[#FEB601] hover:text-white bg-white rounded-full px-4
-          py-2 '> Log In</button>
+          py-2 mr-'> Log In</button>
         </div>
         <i className='bx bx-menu xl:hidden justify-center block text-5xl cursor-pointer '
           onClick={()=> setIsMenuOpen(!isMenuOpen)}>
