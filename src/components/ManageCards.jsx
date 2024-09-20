@@ -12,7 +12,7 @@ export const ManageCards = () => {
             Update or Add Your Card Details 
     </p>
            
-            <div className="flex flex-wrap md:ml-[70px] gap-4">
+            <div className="flex flex-wrap md:ml-[70px] gap-4 lg:gap-8">
               <div className="w-[450px] ">
                 <label className="block text-[#FEB601] font-bold mb-2">
                 First Name *
@@ -20,7 +20,7 @@ export const ManageCards = () => {
                 <input
                   type="text"
                   placeholder="John"
-                  className="w-full p-2 border border-gray-300 rounded"
+                  className="w-full p-2 border border-gray-300 rounded italic"
                 />
               </div>
               <div className="w-[450px] ">
@@ -30,7 +30,7 @@ export const ManageCards = () => {
                 <input
                   type="text"
                   placeholder="Doe"
-                  className="w-full p-2 border border-gray-300 rounded"
+                  className="w-full p-2 border border-gray-300 rounded italic"
                 />
               </div>
               <div className="w-[450px] ">
@@ -40,7 +40,7 @@ export const ManageCards = () => {
                 <input
                   type="text"
                   placeholder="+44 12345679"
-                  className="w-full p-2 border border-gray-300 rounded"
+                  className="w-full p-2 border border-gray-300 rounded italic"
                 />
               </div>
               <div className="w-[450px] ">
@@ -50,7 +50,7 @@ export const ManageCards = () => {
                 <input
                   type="email"
                   placeholder="Email@yahoo.com"
-                  className="w-full p-2 border border-gray-300 rounded"
+                  className="w-full p-2 border border-gray-300 rounded italic"
                 />
               </div>
               <div className="w-[450px]">
@@ -60,7 +60,7 @@ export const ManageCards = () => {
                 <input
                   type="password"
                   placeholder="********"
-                  className="w-full p-2 border border-gray-300 rounded"
+                  className="w-full p-2 border border-gray-300 rounded italic"
                 />
               </div>
               <div className="w-[450px] ">
@@ -70,25 +70,25 @@ export const ManageCards = () => {
                 <input
                   type="password"
                   placeholder="********"
-                  className="w-full p-2 border border-gray-300 rounded"
+                  className="w-full p-2 border border-gray-300 rounded italic"
                 />
               </div>
-              <div className="col-span-2 lg:w-[920px] w-[450px] ">
-                <label className="block text-[#FEB601] font-bold mb-2">
+              <div className="  w-[450px] ">
+                <label className="block text-[#FEB601] font-bold mb-2 ">
                 Expiration Date
                 </label>
                 <input
                   type="text"
-                  placeholder="Billing Address"
-                  className="w-full p-2 border border-gray-300 rounded"
+                  placeholder="MM/YYYY"
+                  className="w-full p-2 border border-gray-300 rounded italic"
                 />
               </div>
               <div className="w-[450px]">
                 <label className="block text-[#FEB601] font-bold mb-2">CVV</label>
                 <input
                   type="text"
-                  placeholder="ABC"
-                  className="w-full p-2 border border-gray-300 rounded"
+                  placeholder="5555"
+                  className="w-full p-2 border border-gray-300 rounded italic"
                 />
               </div>
               
