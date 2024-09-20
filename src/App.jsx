@@ -8,6 +8,8 @@ import {Profile} from '../../bookme/src/components/Profile';
 import {Submission} from '../../bookme/src/components/Submission';
 import { Main } from "../../bookme/src/components/Main";
 import { Footer } from "../../bookme/src/components/Footer";
+import EditProfile from "./components/EditProfile";
+import {ManageCards} from '../../bookme/src/components/ManageCards';
 
 // import { LoginRegister } from "../../bookme/src/components/LoginRegister";
 // import LoginReg from "./pages/loginReg";
@@ -20,7 +22,7 @@ function App() {
         {/* <Hero /> */}
         <Navbar/>
         {/* <div className="bg-black"><Profile/></div> */}
-        <Submission/>
+        <ManageCards/>
         <Footer/>
       
          {/*
