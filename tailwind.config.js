@@ -1,26 +1,28 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-    },
-    extend: {
-      boxShadow: {
-        'custom': '3px 2px 4.1px 0px #00000091',
+    colors: {
+        black: "#000000",
+        white: "#ffffff",
+        jetBlack: "#0e0e0e",
+        redfive: "#e1484a",
+        gray: "#c1cad4",
+        side_blue: "#2D60FF",
+        custom_white: "#DFEAF2",
+        borderGray: '#E6EFF5',
+        lightGray: "#FAFBFD",
+        hex : "#FE9901",
+        yel: '#FEB601',
+        sky: '#EAECF0',
       },
-      
+    extend: {
+      screens: {
+        'xs': '480px',
+        '2xl': '1536px',
+      },
     },
   },
   plugins: [],

@@ -1,131 +1,160 @@
-import React from 'react'
-import { TbArrowBack } from "react-icons/tb";
+import React, { useState } from 'react';
 import { IoIosCloudDone } from "react-icons/io";
+import { FaRegArrowAltCircleDown} from "react-icons/fa";
 
-const EditProfile = () => {
-    return (
-        <div className="bg-white rounded-3xl -mt-6 md:-mt-16  shadow-lg p-6 max-w-7xl mx-auto">
-          <div className="w-full max-w-7xl bg-white rounded-lg p-8">
-            <h1 className="md:text-5xl  text-3xl font-bold text-black mb-4">Bookmee</h1>
-            <p className="text-lg"> Edit Profile</p>
-            <p className="text-sm text-center mb-4 text-[#BDBDBD] max-w-xl mx-auto mt-6">
-            Update Your Details Like Name, Email, Address, City etc.
-    </p>
-           
-            <div className="flex flex-wrap md:ml-[70px] gap-4">
-              <div className="w-[450px] ">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                Edit First Name *
-                </label>
-                <input
-                  type="text"
-                  placeholder="John"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="w-[450px] ">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                Edit Last Name *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Doe"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="w-[450px] ">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                 Edit Mobile Number*
-                </label>
-                <input
-                  type="text"
-                  placeholder="+44 12345679"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="w-[450px] ">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                 Edit E-mail*
-                </label>
-                <input
-                  type="email"
-                  placeholder="Email@yahoo.com"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="w-[450px]">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                Set New  Password*
-                </label>
-                <input
-                  type="password"
-                  placeholder="********"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="w-[450px] ">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                  Confirm New Password
-                </label>
-                <input
-                  type="password"
-                  placeholder="********"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="col-span-2 lg:w-[920px] w-[450px] ">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                Edit Billing Address
-                </label>
-                <input
-                  type="text"
-                  placeholder="Billing Address"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="w-[450px]">
-                <label className="block text-[#FEB601] font-bold mb-2">Edit City</label>
-                <input
-                  type="text"
-                  placeholder="ABC"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="w-[450px] ">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                Edit  Postcode
-                </label>
-                <input
-                  type="text"
-                  placeholder="***"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
-              </div>
-              <div className="w-[450px]">
-                <label className="block text-[#FEB601] font-bold mb-2">
-                Edit Country
-                </label>
-                <input
-                  type="text"
-                  placeholder="ABC"
-                  className="w-full p-2 border border-gray-300 rounded"
-                />
+
+const ProfileForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    mobileNumber: '',
+    email: '',
+    billingAddress: '',
+    city: '',
+    postCode: '',
+    country: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log(formData);
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-100 py-12 relative">
+      <div className="container mx-auto px-0">
+      <div className="bg-white rounded-3xl -mt-6 md:-mt-16 shadow-lg  p-12 w-full lg:w-[100%] mx-auto ">
+      <h2 className="text-4xl font-bold mb-2 text-[#333333]">Bookmee</h2>
+
+        <p className="text-lg mb-6">Edit Profile</p>
+
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block mb-3 text-[#FFCA09] font-bold ">Edit First Name *</label>
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="John"
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-3 text-[#FFCA09] font-bold ">Edit Last Name *</label>
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Doe"
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-3 text-[#FFCA09] font-bold ">Edit Mobile Number *</label>
+              <input
+                type="text"
+                name="mobileNumber"
+                value={formData.mobileNumber}
+                onChange={handleChange}
+                placeholder="+44 123456789"
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-3 text-[#FFCA09] font-bold">Edit E-mail *</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email@yahoo.com"
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-3 text-[#FFCA09] font-bold ">Edit Billing Address *</label>
+              <input
+                type="text"
+                name="billingAddress"
+                value={formData.billingAddress}
+                onChange={handleChange}
+                placeholder="1234 Elm St"
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-3 text-[#FFCA09] font-bold ">Edit City *</label>
+              <input
+                type="text"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                placeholder="City"
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-3 text-[#FFCA09] font-bold ">Edit Post Code *</label>
+              <input
+                type="text"
+                name="postCode"
+                value={formData.postCode}
+                onChange={handleChange}
+                placeholder="12345"
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block mb-3 text-[#FFCA09] font-bold ">Edit Country *</label>
+              <input
+                type="text"
+                name="country"
+                value={formData.country}
+                onChange={handleChange}
+                placeholder="United Kingdom"
+                className="w-full p-2 border border-gray-300 rounded"
+                required
+              />
+            </div>
+
+            <div className="col-span-2">
+              <div className="flex justify-center md:gap-20 mt-8">
+                <button className="bg-black text-[#FEB601] p-2 text-xl rounded font-semibold flex w-[200px] md:w-[400px] max-w-md items-center justify-center mr-4">
+                  Back
+                   <FaRegArrowAltCircleDown className="ml-2 mr-2" />
+                </button>
+                <button className="bg-[#FEB601] text-black p-2 text-xl font-semibold rounded md:w-[400px] w-[400px] flex max-w-xl items-center justify-center">
+                  Update 
+                  <IoIosCloudDone className="ml-2 mr-2" />
+                </button>
               </div>
             </div>
-            <div className="flex justify-center  md:gap-20 mt-8">
-              <button className="bg-black text-[#FEB601] p-2 text-xl rounded font-semibold flex w-[200px] md:w-[400px] max-w-md items-center justify-center mr-4">
-               Back
-               <TbArrowBack className="ml-2 mr-2" />
-              </button>
-              <button className="bg-[#FEB601] text-black p-2 text-xl font-semibold  rounded md:w-[400px] w-[400px] flex max-w-xl items-center justify-center">
-                Update
-                <IoIosCloudDone className="ml-2 mr-2" />
-               
-              </button>
-            </div>
-          </div>
+          </form>
         </div>
-      );
-}
+      </div>
+    </div>
+  );
+};
 
-export default EditProfile
+export default ProfileForm;

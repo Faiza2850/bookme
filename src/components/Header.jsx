@@ -1,40 +1,58 @@
-import React, { useState } from 'react'
-import logo from '../images/logo.png';
+import React from 'react'
+import logo from '../assets/logo.svg';
+import { Link } from "react-router-dom";
 
-export const Header = () => {
-    const [isMenuOpen, setIsMenuOpen]= useState(false)
+const Header = () => {
   return (
-    <div className='bg-black  flex w-full items-center text-white py-6  md:px-20 '>
-      <img src={logo} alt='bookme' className=' h-10 w-36 hover:scale-105 ml-2 md:mr-96 transition-all'/>
-      <header className='flex  text-white '>
-      <div className='flex mr-44 sm:mr-36 md:mr-60 max-w-full'>
-  <ul className='hidden xl:flex hover:scale-105 transition-all text-base'>
-    <li className='p-3 hover:text-[#FEB601] transition-all cursor-pointer'>Home</li>
-    <li className='p-3 hover:text-[#FEB601] transition-all cursor-pointer'>Q&A</li>
-    <li className='p-3 hover:text-[#FEB601] transition-all cursor-pointer'>T&C</li>
-    <li className='p-3 hover:text-[#FEB601] transition-all cursor-pointer'>Contact Us</li>
-  </ul>
-</div>
+    <div>
 
-        <div className=' relative  hidden md:flex md:justify-center -mr-72 sm:ml-4 md:ml-10 items-center gap-3  '>
-          <button className='left-3 bg-[#FEB601] hover:bg-white hover:text-[#FEB601] text-white rounded-full px-4
-          py-2'>Live Chat</button>
-          <button className=' left-3 text-[#FEB601] hover:bg-[#FEB601] hover:text-white bg-white rounded-full px-4
-          py-2 mr-'> Log In</button>
-        </div>
-        <i className='bx bx-menu lg:hidden justify-center block text-5xl cursor-pointer '
-          onClick={()=> setIsMenuOpen(!isMenuOpen)}>
-            <div className={`absolute xl:hidden top-24 -ml-10 w-32  border-r-[#FEB601] border-l-[#FEB601] border-b-[#FEB601] border-t-black border-4 bg-black flex flex-col items center  font-semibold text-lg transform-transition ${isMenuOpen ? 'opacity-100' : 'opacity-0 '}`} style={{transition:'transform 0.3s ease, opacity 0.3s ease'}}>
-              <li className='list-none w-full bg-black text-center p-4 hover:text-[#FEB601] transition-all cursor-pointer '>Home</li>
-              <li className='list-none w-full  bg-black text-center p-4 hover:text-[#FEB601] transition-all cursor-pointer '>Q&A</li>
-              <li className='list-none w-full  bg-black text-center p-4 hover:text-[#FEB601] transition-all cursor-pointer '>T&C</li>
-              <li className='list-none w-full  bg-black text-center p-4 hover:text-[#FEB601] transition-all cursor-pointer '>Contact Us</li>
-            </div>
-        </i>
-      </header>
+<header className="bg-black text-white py-4 px-6 flex justify-between items-center">
+  {/* Left Section: Logo */}
+  <div className="flex items-center">
+    <img src={logo} alt="Bookmee Logo" className="h-8 mr-4" />
+  </div>
+
+  {/* Middle Section: Navigation */}
+  <div className="flex-1">
+    <nav>
+      <ul className="md:flex hidden md:justify-center space-x-20">
+        <li>
+          <Link to="/" className="hover:text-[#FFAE00]">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/qa" className="hover:text-[#FFAE00]">
+            Q&A
+          </Link>
+        </li>
+        <li>
+          <Link to="/tc" className="hover:text-[#FFAE00]">
+            T&C
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact" className="hover:text-[#FFAE00]">
+            Contact Us
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  {/* Right Section: Buttons */}
+  <div className="flex items-center">
+    <button className="bg-[#FFAE00] text-black px-4 py-1 rounded-3xl hover:bg-[#FFB92E]">
+      Live Chat
+    </button>
+    <button className="ml-4 text-[#FE9901] px-6 font-bold font- py-1.5 poppins text-sm rounded-3xl bg-white hover:text-[#FFB92E]">
+      Log In
+    </button>
+  </div>
+</header>
 
     </div>
   )
 }
 
-// export default Header
+export default Header
